@@ -6,7 +6,7 @@ OS reload tool of Barematal server with sshkey, post-install script, change Oper
 
 
 
-### 使用前の準備事項
+## 使用前の準備事項
 
  環境変数をセットしてください。 SoftLayer APIのエンド・ポイントの認証情報が必須です。
 
@@ -22,7 +22,7 @@ OS reload tool of Barematal server with sshkey, post-install script, change Oper
    このコードは、python 2.7.14 で開発しました。
 
 
-### doReloadOSforBaremetal.py
+## doReloadOSforBaremetal.py
 
   ベアメタルのOSを再ロードしてします。 
   OSをリロードすることで、ディスクのデータが全て消去されますが、確認もプロンプトはありません。 
@@ -45,7 +45,7 @@ OS reload tool of Barematal server with sshkey, post-install script, change Oper
 ~~~
 
 
-### getInstalledOS.py
+## getInstalledOS.py
 
  ベアメタルサーバーにインストールされたOSのスペックを表示します。
 
