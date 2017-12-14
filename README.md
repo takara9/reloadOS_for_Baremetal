@@ -10,8 +10,10 @@ OS reload tool of Barematal server with sshkey, post-install script, change Oper
 
  環境変数をセットしてください。 SoftLayer APIのエンド・ポイントの認証情報が必須です。
 
-   export SOFTLAYER_API_KEY=<API KEYをセット>
-   export SOFTLAYER_USERNAME=<USER NAMEをセット>
+~~~
+   * export SOFTLAYER_API_KEY=<API KEYをセット>
+   * export SOFTLAYER_USERNAME=<USER NAMEをセット>
+~~~
 
    環境変数は、IBM Cloud Infrastructure （旧SoftLayer カスタマーポータル）
    のメニューバーから Accout -> Users -> API KEY で参照できます。
@@ -27,8 +29,9 @@ OS reload tool of Barematal server with sshkey, post-install script, change Oper
 
   再ロード時に、下記のOSの変更、ssh Key、Post-Install スクリプトの指定ができます。
 
+~~~
    priceId = ベアメタル用 OSを含めたイメージの番号で、
-             listBaremetalImageId.pyでリストできます。
+              listBaremetalImageId.pyでリストできます。
 
    sshKey1 = ログインに利用するssh公開鍵のIDです。
              slcli sshkey list コマンドで取得できます。
@@ -39,6 +42,7 @@ OS reload tool of Barematal server with sshkey, post-install script, change Oper
    pScriptUrl = OSをリロードした後に一回だけ実行されるスクリプトのURLです。
                GitHubを利用することもできます。以下はGitHubを指定するURLの例です。
     'https://raw.githubusercontent.com/takara9/ProvisioningScript/master/ubuntu_hack1'
+~~~
 
 
 ### getInstalledOS.py
@@ -55,16 +59,19 @@ OS reload tool of Barematal server with sshkey, post-install script, change Oper
 
  location と pkgId を自身の環境に合わせて変更してください。
 
+~~~
  location はデータセンターを表す記号です。 
    東京DC tok02
 
  pkgIdは、ベアメタルのパッケージの番号です。
    getBaremetalPkg.pyでリストできます。
+~~~
 
 
 ## getBaremetalPkg.py
 
  ベアメタルのインストール・パッケージのリストを表示します。
- 注意 
+
+ #### 注意 
    内部的に利用されているBluemix PaaSのパッケージなど含めれますので、
    全てが利用できるわけではありません。
