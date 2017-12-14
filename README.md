@@ -2,16 +2,22 @@
 
 OS reload tool of Barematal server with sshkey, post-install script, change Operationg system
 
+このツールは、ベアメタルサーバーのOSをリロードする際に、ログイン用ssh公開鍵、ポスト・インストールスクリプト（プロビジョニング・スクリプト）、オペレーティングシステムの変更を設定できるツールです。
+
+
 
 ### 使用前の準備事項
 
- 環境変数を事前にセットしてください。
+ 環境変数をセットしてください。 SoftLayer APIのエンド・ポイントの認証情報が必須です。
 
    export SOFTLAYER_API_KEY=<API KEYをセット>
    export SOFTLAYER_USERNAME=<USER NAMEをセット>
 
    環境変数は、IBM Cloud Infrastructure （旧SoftLayer カスタマーポータル）
    のメニューバーから Accout -> Users -> API KEY で参照できます。
+
+ Python 2.7系を導入した後、pip install softlayer を実行してください。
+   このコードは、python 2.7.14 で開発しました。
 
 
 ### doReloadOSforBaremetal.py
